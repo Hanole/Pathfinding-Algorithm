@@ -1,2 +1,89 @@
 main {
 }
+
+.maze-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: grey;
+}
+
+.maze-button {
+  margin: 10px;
+  background-color: #6161e5;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.7;
+  transition: 0.6s;
+}
+
+:hover.maze-button {
+  opacity: 1;
+  background-color: #3b3be8;
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+}
+
+.maze {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+.cell.wall {
+  background-color: black;
+
+}
+
+.cell.path {
+  background-color: white;
+}
+
+.cell.start {
+  background-color: green;
+}
+
+.cell.end {
+  background-color: red;
+}
+
+.cell.visited {
+  opacity: 0.8;
+  background-color: #6786B5;
+  -webkit-animation: random 3s infinite;
+  animation: random 3s;
+  border: 0.5px solid white;
+}
+
+@keyframes  random {
+    0% { background-color: red; }
+    30% { background-color: yellow; }
+    45% { background-color: green; }
+/*    60% { background-color: blue; }*/
+/*    60% { background-color: white; }*/
+    60% { background-color: #6786B5; }
+
+}
